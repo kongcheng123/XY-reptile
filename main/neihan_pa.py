@@ -2,11 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import mysql.connector
 
-
+# 爬取 内涵段子
 # 连接数据库
 conn = mysql.connector.connect(user='root', password='xy521521', database='xy')
 cursor = conn.cursor()
-# 爬取 内涵段子
+
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
     }
