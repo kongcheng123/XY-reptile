@@ -21,7 +21,7 @@ for x in range(14):
         ct = span.img.attrs['src']
         result = 'https:'+ct
         # p = tag.a.div.span.get_text()
-        cursor.execute('insert into picture (url) values (%s)', [result])
+        cursor.execute('insert into picture (util) values (%s)', [result])
         # print(cursor.rowcount)
         print(result)
 conn.commit()
