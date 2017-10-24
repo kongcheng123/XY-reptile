@@ -1,10 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
 import mysql.connector
+import configparser
 
 # 爬取 丑事百科 图片
+cf = configparser.ConfigParser()
+cf.read("../db.conf")
+db_user = cf.get("db", "db_user")
+db_pwd = cf.get("db", "db_pwd")
 # 连接数据库
-conn = mysql.connector.connect(user='root', password='xy521521', database='xy')
+conn = mysql.connector.connect(user=db_user, password=db_pwd, database='xy')
 cursor = conn.cursor()
 
 headers = {
